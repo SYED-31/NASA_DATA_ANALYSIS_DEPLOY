@@ -1,0 +1,27 @@
+2024-12-16 21:55:26,716 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 21:55:26,716 [33mPress CTRL+C to quit[0m
+2024-12-16 21:55:26,719  * Restarting with stat
+2024-12-16 21:55:35,735  * Debugger is active!
+2024-12-16 21:55:35,743  * Debugger PIN: 290-538-969
+2024-12-16 21:55:35,916 127.0.0.1 - - [16/Dec/2024 21:55:35] "GET / HTTP/1.1" 200 -
+2024-12-16 21:55:41,978 127.0.0.1 - - [16/Dec/2024 21:55:41] "POST /plot HTTP/1.1" 200 -
+2024-12-16 21:55:53,837 127.0.0.1 - - [16/Dec/2024 21:55:53] "POST /plot HTTP/1.1" 200 -
+2024-12-16 22:46:45,448 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 22:46:45,449 [33mPress CTRL+C to quit[0m
+2024-12-16 22:46:45,452  * Restarting with stat
+2024-12-16 22:46:51,135  * Debugger is active!
+2024-12-16 22:46:51,139  * Debugger PIN: 290-538-969
+2024-12-16 22:56:14,474  * Detected change in 'E:\\Study\\Projects\\Visualization\\NASA\\cleaned_dataset\\nasa_code.py', reloading
+2024-12-16 22:56:18,593  * Restarting with stat
+2024-12-16 22:56:24,621  * Debugger is active!
+2024-12-16 22:56:24,625  * Debugger PIN: 290-538-969
+2024-12-16 23:01:39,274 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-16 23:01:39,275 [33mPress CTRL+C to quit[0m
+2024-12-16 23:01:39,277  * Restarting with stat
+2024-12-16 23:01:46,257  * Debugger is active!
+2024-12-16 23:01:46,262  * Debugger PIN: 290-538-969
+2024-12-16 23:01:50,814 127.0.0.1 - - [16/Dec/2024 23:01:50] "GET / HTTP/1.1" 200 -
+2024-12-16 23:01:51,661 127.0.0.1 - - [16/Dec/2024 23:01:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

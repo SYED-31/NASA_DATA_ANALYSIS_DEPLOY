@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Battery Data Visualization</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        h1 {
+            margin-top: 20px;
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* Form Container */
+        form {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Plot Display */
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>NASA Battery Data Visualization</h1>
+    
+    <form action="/plot" method="POST">
+        <label for="battery_id">Select Battery ID:</label>
+        <select id="battery_id" name="battery_id" required>
+            {% for battery_id in battery_ids %}
+                <option value="{{ battery_id }}">{{ battery_id }}</option>
+            {% endfor %}
+        </select>
+        
+        <label for="plot_type">Select Plot Type:</label>
+        <select id="plot_type" name="plot_type" required>
+            <option value="line_impedance">Line Plot - Impedance</option>
+            <option value="scatter_impedance">Scatter Plot - Impedance</option>
+            <option value="bar_impedance">Bar Plot - Impedance</option>
+            <option value="line_Re">Line Plot - Re</option>
+            <option value="scatter_Re">Scatter Plot - Re</option>
+            <option value="bar_Re">Bar Plot - Re</option>
+            <option value="line_Rct">Line Plot - Rct</option>
+            <option value="scatter_Rct">Scatter Plot - Rct</option>
+            <option value="bar_Rct">Bar Plot - Rct</option>
+            <option value="impedance_trends">Impedance Trends Across Batteries</option>
+            <option value="heatmap">Heatmap</option>
+            <option value="3d_plot">3D Plot</option>
+        </select>
+        
+        <button type="submit">Generate Plot</button>
+    </form>
+
+    {% if plot_path %}
+        <h2>Generated Plot</h2>
+        <iframe src="{{ plot_path }}"></iframe>
+    {% endif %}
+
+    <footer>
+        <p>&copy; 2024 NASA Battery Data Project. Created by <a href="https://github.com/your-profile" target="_blank">Your Name</a>.</p>
+    </footer>
+</body>
+</html>
